@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-   body{
+body{
   margin:0;
   background:#2ec4b6;
   font-family:'Montserrat', sans-serif;
@@ -188,63 +188,6 @@
   }
 }
 
-/* CTA WRAPPER */
-.cta-wrapper{
-  padding:160px 80px;
-  background:#2ec4b6;
-  display:flex;
-  justify-content:center;
-}
-
-
-.cta-wrapper{
-  padding:160px 80px;
-  background:#050507;
-  display:flex;
-  justify-content:center;
-}
-
-.cta-box{
-  max-width:720px;
-  width:100%;
-  padding:80px 60px;
-  border-radius:32px;
-  text-align:center;
-  color:#fff;
-
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 40px 120px rgba(0,0,0,.6);
-
-  opacity:0;
-  transform:translateY(40px);
-  animation:ctaFade 1s ease forwards;
-}
-
-/* VIDEO */
-.video-bg video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* OVERLAY */
-.video-bg::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.65);
-  z-index:1;
-}
-
-/* CONTENT ABOVE VIDEO */
-.video-bg > *{
-  position:relative;
-  z-index:2;
-}
-
 .cta-brand{
   display:block;
   margin-bottom:28px;
@@ -266,29 +209,6 @@
   margin-bottom:46px;
 }
 
-.cta-btn{
-  display:inline-block;
-  padding:18px 54px;
-  border-radius:50px;
-  background:#fff;
-  color:#000;
-  font-weight:900;
-  text-decoration:none;
-  transition:.35s ease;
-}
-
-.cta-btn:hover{
-  transform:translateY(-4px) scale(1.05);
-}
-
-@keyframes ctaFade{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-
 .cta-btn:hover{
   transform:translateY(-4px) scale(1.05);
   box-shadow:0 20px 50px rgba(0,0,0,.3);
@@ -301,22 +221,6 @@
     transform:translateY(0);
   }
 }
-
-
-@media(max-width:768px){
-  .cta-wrapper{
-    padding:120px 24px;
-  }
-
-  .cta-box{
-    padding:60px 32px;
-  }
-
-  .cta-box h2{
-    font-size:42px;
-  }
-}
-
 
 .systems{
   padding:140px 80px;
@@ -398,19 +302,22 @@
   }
 }
 
-
+/* MARK: Тут поправити padding та justify забрати*/
 .cta-wrapper{
-  padding:160px 80px;
+  /* padding:160px 80px; */
   background:#2ec4b6;
   display:flex;
-  justify-content:center;
+  /* justify-content:center; */
 }
 
+/* MARK: border-radius, max-width (забираємо бо нам потрібно 100% ширини) */
+/* ну і звичайно Padding забираємо для вигляду на 100% ширину */
 .cta-box{
-  max-width:720px;
-  width:100%;
-  padding:80px 60px;
-  border-radius:32px;
+  /* max-width:720px; */
+  width: 100%;
+  height: 500px;
+  /* padding:80px 60px; */
+  /* border-radius:32px; */
   text-align:center;
   color:#fff;
 
@@ -431,15 +338,29 @@
   width:100%;
   height:100%;
   object-fit:cover; 
+  /* MARK: Фейд відео */
+  /* Для фейду на відео потрібен z-index: 0; */
+  z-index: 0;
 }
 
 
 .video-bg::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  z-index:1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* Замість просто чорного (чорно/білий градієнт) */
+  /* Це покращить видимість тексту "JustMove" */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+
+  /* filter: blur(5px); */
+
+  pointer-events: none;
 }
 
 
@@ -448,10 +369,11 @@
   z-index:2;
 }
 
-
+/* Оскільки Just move напис на відео без padding */
+/* буде в самому верху -- змінюємо margin-bottom на margin-top */
 .cta-brand{
   display:block;
-  margin-bottom:28px;
+  margin-top:28px;
   font-weight:800;
   letter-spacing:2px;
   text-transform:uppercase;
@@ -481,19 +403,6 @@
   text-decoration:none;
   transition:.35s ease;
 }
-
-.cta-btn:hover{
-  transform:translateY(-4px) scale(1.05);
-}
-
-
-@keyframes ctaFade{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
 
 @media(max-width:768px){
   .cta-wrapper{
