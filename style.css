@@ -944,3 +944,13 @@ body{
 
 
 
+.cards-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.program-card{  
+  padding: 7rem 7rem;
+}
