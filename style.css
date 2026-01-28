@@ -106,11 +106,15 @@ body{
   display:flex;
   align-items:center;
   padding:0 80px;
-  background:
+  /* background:
     radial-gradient(circle at 30% 0%, #111 0%, transparent 40%),
     radial-gradient(circle at 80% 20%, #1a0b0b 0%, transparent 35%),
-    #2ec4b6;
+    #2ec4b6; */
+    background-size: cover;
+    background-position: 90% 5%;
+    background-image: url(./images/beautiful-girl-wearing-sportswear-is-posing-smith-machine-fitness-center.jpg);
 }
+
 
 .hero-text{
   max-width:600px;
@@ -122,6 +126,7 @@ body{
   line-height:1.05;
   font-weight:900;
   margin-bottom:28px;
+  color: #050507;
 }
 
 .hero h1 span{
@@ -417,7 +422,7 @@ body{
 .cta-box{
   /* max-width:720px; */
   width: 100%;
-  height: 500px;
+  height: 800px;
   /* padding:80px 60px; */
   /* border-radius:32px; */
   text-align:center;
@@ -475,7 +480,7 @@ body{
 /* буде в самому верху -- змінюємо margin-bottom на margin-top */
 .cta-brand{
   display:block;
-  margin-top:28px;
+  margin-top:150px;
   font-weight:800;
   letter-spacing:2px;
   text-transform:uppercase;
@@ -952,5 +957,5 @@ body{
 }
 
 .program-card{  
-  padding: 7rem 7rem;
+  padding: 3rem 6rem;
 }

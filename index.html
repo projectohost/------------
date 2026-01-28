@@ -10,24 +10,29 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&family=Montserrat:wght@100..900&display=swap"
       rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-
-  <body>
-    <!-- HEADER -->
-    <header>
-      <nav class="navbar">
-        <div class="nav-container">
-          <div class="nav-logo">Just Move</div>
+      />
+      
+      <link rel="stylesheet" href="./style.css" />
+    </head>
+    
+    <body>
+      <!-- HEADER -->
+      <header>
+        <nav class="navbar">
+          <div class="nav-container">
+          <img
+            src="./images/Logo_dinámico__JUST_MOVE___1_-removebg-preview.png"
+            alt="Just Move logo"
+            class="hero-logo" height="90px"
+          />
+      
 
           <ul class="nav-links">
-            <li><a href="#">Програми</a></li>
-            <li><a href="#">Тренування</a></li>
-            <li><a href="#">Наші послуги</a></li>
-            <li><a href="#">Абонементи</a></li>
-            <li><a href="#">Відгуки</a></li>
+            <li><a href="#program">Програми</a></li>
+            <li><a href="#system">Тренування</a></li>
+            <li><a href="#service">Наші послуги</a></li>
+            <li><a href="#price">Абонементи</a></li>
+            <li><a href="#testimonial">Відгуки</a></li>
           </ul>
 
           <a href="#" class="nav-cta">Зареєструватись</a>
@@ -36,11 +41,6 @@
 
       <section class="hero reveal">
         <div class="hero-content">
-          <img
-            src="./images/Logo_dinámico__JUST_MOVE___1_-removebg-preview.png"
-            alt="Just Move logo"
-            class="hero-logo" height="200px"
-          />
 
           <h1>
             Move.<br />
@@ -61,7 +61,7 @@
     <!-- MAIN -->
     <main>
       <!-- PROGRAMS -->
-      <section class="programs">
+      <section class="programs" id="program">
         <div class="programs-header">
           <h2>Фірмові програми</h2>
           <p>Обрані програми для сили, витривалості та дисципліни.</p>
@@ -89,7 +89,7 @@
       </section>
 
       <!-- SYSTEMS -->
-      <section class="systems">
+      <section class="systems" id="system">
         <div class="systems-header">
           <h2>Системні тренування</h2>
           <p>Побудовано на силі, витривалості та контролі руху.</p>
@@ -119,7 +119,7 @@
       </section>
 
       <!-- SERVICES -->
-      <section class="services">
+      <section class="services" id="service">
         <div class="services-header">
           <h2>Наші послуги</h2>
           <p>Системний підхід до сили, руху та витривалості.</p>
@@ -157,7 +157,7 @@
       </section>
 
       <!-- PRICING -->
-      <section class="pricing">
+      <section class="pricing" id="price">
         <div class="pricing-header reveal">
           <h2>Абонементи</h2>
           <p>Обери формат, який підходить саме тобі.</p>
@@ -218,7 +218,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonial">
       <div class="testimonials-header">
         <h2>Що кажуть про Just Move</h2>
         <p>Реальні люди. Реальні результати.</p>
