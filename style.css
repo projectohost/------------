@@ -189,7 +189,7 @@ body{
 
 /* PROGRAMS SECTION */
 .programs{
-  padding:120px 80px;
+  padding:40px 80px;
   background:#2ec4b6;
 }
 
@@ -323,7 +323,7 @@ body{
 }
 
 .systems{
-  padding:140px 80px;
+  padding:40px 80px;
   background:#2ec4b6;
 }
 
@@ -741,7 +741,7 @@ body{
 /* SERVICES */
 .services{
   background:#2ec4b6;
-  padding:140px 80px;
+  padding:40px 80px;
   color:#081816;
 }
 
@@ -821,7 +821,7 @@ body{
 
 .pricing{
   background:#2ec4b6;
-  padding:140px 80px;
+  padding:40px 80px;
   color:#081816;
 }
 
@@ -861,9 +861,7 @@ body{
   box-shadow:0 30px 80px rgba(0,0,0,.15);
 }
 
-.pricing-card.featured{
-  transform:scale(1.05);
-}
+
 
 .price{
   font-size:28px;
@@ -959,3 +957,29 @@ body{
 .program-card{  
   padding: 3rem 6rem;
 }
+
+.plan-image{
+  width: 100%;
+  height: 160px;         
+  margin-top: 20px;
+  border-radius: 14px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.9;
+}
+
+.pricing-card.start .plan-image{
+  background-image: url("./images/start1.jpg");
+}
+
+.pricing-card.featured.reveal .plan-image{
+  background-image: url("./images/pro1.jpg");
+}
+
+.pricing-card.reveal .plan-image{
+  background-image: url("./images/elite3.jpg");
+}
+
