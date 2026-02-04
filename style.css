@@ -30,7 +30,21 @@ body{
   padding: 15px 10%;
   max-width: 1400px;
   margin: auto;
+animation: slidedown 1.5s ease-out forwards;
+
 }
+@keyframes slidedown {
+      from {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
 
 /* Logo */
 .nav-logo {
@@ -115,6 +129,20 @@ body{
     background-image: url(./images/beautiful-girl-wearing-sportswear-is-posing-smith-machine-fitness-center.jpg);
 }
 
+@keyframes slideIn{
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+.hero-content{
+  animation: slideIn 3s cubic-bezier(1,-0.01,.97,-0.03) forwards;
+}
 
 .hero-text{
   max-width:600px;
